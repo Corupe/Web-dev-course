@@ -7,6 +7,7 @@ export interface SlideContent {
   bulletPoints?: string[];
   type: 'title' | 'content' | 'section' | 'quiz' | 'game' | 'project' | 'resource';
   backgroundColor?: string;
+  image?: string;
 }
 
 export const slides: SlideContent[] = [
@@ -15,9 +16,10 @@ export const slides: SlideContent[] = [
     id: 1,
     day: 1,
     title: 'Web Development Fundamentals',
-    subtitle: 'Master HTML, CSS & JavaScript in 3 Days',
+    subtitle: 'A 3-Day Crash Course: HTML, CSS & JavaScript',
     type: 'title',
-    backgroundColor: 'from-purple-900 to-slate-blue-900'
+    backgroundColor: 'from-purple-900 to-slate-blue-900',
+    image: '/hero.webp'
   },
 
   // SECTION 1: WHAT IS THE WEB?
@@ -26,6 +28,7 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'What is the Web?',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Understanding the internet, browsers, and how information flows'
   },
   {
@@ -87,6 +90,7 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'Curiosity Questions: Explore',
     type: 'quiz',
+    backgroundColor: 'from-orange-900 to-red-900',
     content: 'Research these fascinating web concepts',
     bulletPoints: [
       '🔍 How does DNS translate "google.com" to an IP address?',
@@ -102,7 +106,22 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'What is Programming?',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Learning the logic and language of computers'
+  },
+  {
+    id: 85,
+    day: 1,
+    title: 'The Core: Creative Problem Solving',
+    type: 'content',
+    content: 'Programming is just a tool to solve human problems',
+    bulletPoints: [
+      'Mindset Shift: Don\'t just write code; find solutions',
+      'Break it Down: Cut large, overwhelming problems into tiny pieces',
+      'The Web as a Tool: We use the internet to connect people to solutions easily',
+      'Creativity > Memorization: You don\'t need to memorize syntax, just know how to think logically',
+      'Rule #1: First solve the problem on paper (or whiteboard), then write the code'
+    ]
   },
   {
     id: 9,
@@ -137,6 +156,7 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'Game: Code the Logic',
     type: 'game',
+    backgroundColor: 'from-emerald-900 to-teal-900',
     content: 'Can you write pseudocode for a traffic light?',
     bulletPoints: [
       'Pseudocode = English-like instructions',
@@ -167,6 +187,7 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'What is Web Development?',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Building the websites and applications we use daily'
   },
   {
@@ -181,6 +202,19 @@ export const slides: SlideContent[] = [
       'Full Stack: Developers who do both',
       'DevOps: Deployment and infrastructure',
       'Web Dev Career: High demand, creative, well-paid'
+    ]
+  },
+  {
+    id: 145,
+    day: 1,
+    title: 'The Core Trio: HTML & CSS',
+    type: 'content',
+    content: 'The essential languages for building web pages',
+    bulletPoints: [
+      'HTML (HyperText Markup Language): The structure and skeleton',
+      'CSS (Cascading Style Sheets): The look, feel, and decoration',
+      'JavaScript: The interactive behavior (we will learn this later)',
+      'Together, they form the foundation of all frontend development'
     ]
   },
   {
@@ -202,6 +236,7 @@ export const slides: SlideContent[] = [
     day: 1,
     title: 'Curiosity Questions: Dig Deeper',
     type: 'quiz',
+    backgroundColor: 'from-orange-900 to-red-900',
     content: 'Research web development careers',
     bulletPoints: [
       '💼 What\'s the average salary for frontend developers?',
@@ -217,6 +252,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'Day 2: HTML & CSS Deep Dive',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Structure and styling that powers the web'
   },
 
@@ -226,6 +262,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'HTML: Building Page Structure',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'HyperText Markup Language - The skeleton of web pages'
   },
   {
@@ -291,6 +328,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'Game: Identify HTML Mistakes',
     type: 'game',
+    backgroundColor: 'from-emerald-900 to-teal-900',
     content: 'Spot the semantic HTML errors in bad code',
     bulletPoints: [
       'Bad: <div>Contact</div> for navigation',
@@ -320,6 +358,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'CSS: Styling & Layout Mastery',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Making websites beautiful and responsive'
   },
   {
@@ -397,12 +436,41 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'Quiz: CSS Knowledge Check',
     type: 'quiz',
+    backgroundColor: 'from-orange-900 to-red-900',
     content: 'Test your understanding of CSS concepts',
     bulletPoints: [
       '❓ What\'s the difference between padding and margin?',
       '❓ When would you use Grid vs Flexbox?',
       '❓ How does the cascade determine which rule wins?',
       '❓ What\'s a media query and why use mobile-first?'
+    ]
+  },
+  {
+    id: 315,
+    day: 2,
+    title: 'Developer Tools: Your Superpower',
+    type: 'content',
+    content: 'Inspect and debug any website on the internet',
+    bulletPoints: [
+      'Press F12 (or Right Click -> Inspect) to open DevTools',
+      'Elements Tab: See the HTML & CSS of the current page',
+      'Live Editing: Change styles or text temporarily to test ideas',
+      'Mobile View: Emulate phones and tablets to test responsiveness',
+      'It is the most essential tool for every frontend developer!'
+    ]
+  },
+  {
+    id: 318,
+    day: 2,
+    title: 'Senior Dev Tips: Code Like a Pro',
+    type: 'content',
+    content: 'HTML & CSS pitfalls to avoid from day one',
+    bulletPoints: [
+      'Stop using <div> for everything. Semantic tags matter for SEO.',
+      'CSS gets messy fast: Keep your stylesheets organized and commented',
+      'Pitfall: Focusing too much on Desktop. ALWAYS design Mobile-First.',
+      'Mentality: Steal like an artist (use DevTools to learn from beautiful sites)',
+      'Perfection is the enemy of progress: Build it messy first, then refactor'
     ]
   },
 
@@ -412,6 +480,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'Mini Project: Build a Portfolio Website',
     type: 'project',
+    backgroundColor: 'from-fuchsia-900 to-purple-900',
     content: 'Create your first real website using HTML & CSS',
     bulletPoints: [
       'HTML: Semantic structure with header, nav, main, footer',
@@ -426,6 +495,7 @@ export const slides: SlideContent[] = [
     day: 2,
     title: 'Portfolio Project: Resources & Tools',
     type: 'resource',
+    backgroundColor: 'from-slate-800 to-gray-900',
     content: 'Free tools to build your portfolio',
     bulletPoints: [
       '🔗 Figma.com - Design your layout first',
@@ -442,6 +512,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Day 3: JavaScript & Modern Web Dev',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Making websites interactive and building real applications'
   },
 
@@ -451,6 +522,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'JavaScript: The Language of Interactivity',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Bringing web pages to life with dynamic behavior'
   },
   {
@@ -569,6 +641,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Game: Debug the JavaScript',
     type: 'game',
+    backgroundColor: 'from-emerald-900 to-teal-900',
     content: 'Find and fix common JavaScript errors',
     bulletPoints: [
       'Error: const x = {age: 30}; console.log(x.name) // undefined',
@@ -596,12 +669,27 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Curiosity Questions: Go Deeper',
     type: 'quiz',
+    backgroundColor: 'from-orange-900 to-red-900',
     content: 'Research advanced JavaScript concepts',
     bulletPoints: [
       '🔍 What is the Event Loop? (Advanced!)',
       '🔍 How does JavaScript handle async operations?',
       '🔍 What are Closures and why are they useful?',
       '🔍 What is "this" and why is it confusing?'
+    ]
+  },
+  {
+    id: 465,
+    day: 3,
+    title: 'Senior Dev Mentality: JavaScript Pitfalls',
+    type: 'content',
+    content: 'How experienced developers approach JS',
+    bulletPoints: [
+      'Console.log is your best friend: Print everything to understand what\'s breaking',
+      'Don\'t guess: Read the giant red Error Messages (they tell you exactly what line is wrong)',
+      'Pitfall: Copy-pasting AI code without reading it. You MUST understand what you paste.',
+      'Imposter Syndrome is normal: We all Google "how to center a div" regularly',
+      'Focus on the fundamentals: Frameworks (React/Vue) change, but JS logic stays the same'
     ]
   },
 
@@ -611,6 +699,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Mini Project: Interactive Weather App',
     type: 'project',
+    backgroundColor: 'from-fuchsia-900 to-purple-900',
     content: 'Fetch real weather data and display it beautifully',
     bulletPoints: [
       'HTML: Input for city name, display area',
@@ -625,6 +714,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Weather App: Useful Resources',
     type: 'resource',
+    backgroundColor: 'from-slate-800 to-gray-900',
     content: 'APIs and tools for your project',
     bulletPoints: [
       '🌤️ OpenWeatherMap.org - Free weather API',
@@ -641,6 +731,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Freelance Web Development: Career Path',
     type: 'section',
+    backgroundColor: 'from-blue-900 to-indigo-900',
     content: 'Turn your skills into a sustainable income'
   },
   {
@@ -658,6 +749,20 @@ export const slides: SlideContent[] = [
     ]
   },
   {
+    id: 505,
+    day: 3,
+    title: 'The Freelance Consultant Mindset',
+    type: 'content',
+    content: 'Stop acting like a coder, start acting like a partner',
+    bulletPoints: [
+      'Clients don\'t care about your code. They care about their business goals.',
+      'Ask "Why?" instead of "How?": Understand the business problem you are solving',
+      'Under-promise & Over-deliver: Never set a deadline you cannot easily beat',
+      'Communication > Skills: A responsive, decent developer beats a quiet genius',
+      'Value-Based Pricing: Charge based on the value you bring to their business, not just hourly'
+    ]
+  },
+  {
     id: 51,
     day: 3,
     title: 'In-Demand Skills for Freelancers',
@@ -665,7 +770,6 @@ export const slides: SlideContent[] = [
     content: 'What clients are actively seeking',
     bulletPoints: [
       'Responsive web design - Essential',
-      'WordPress customization - High demand',
       'React/Vue development - Premium rates',
       'Performance optimization - Valued skill',
       'SEO optimization - Business-focused clients'
@@ -683,6 +787,20 @@ export const slides: SlideContent[] = [
       '4. Add JavaScript interactivity',
       '5. Test thoroughly, get client feedback',
       '6. Deploy and provide maintenance'
+    ]
+  },
+  {
+    id: 525,
+    day: 3,
+    title: 'Client Delivery: Domains & Web Hosting',
+    type: 'content',
+    content: 'How to make your website officially live for clients',
+    bulletPoints: [
+      'Free Hosting (Vercel/Netlify): Great for tests & portfolios',
+      'Custom Domains: Clients want "theirbusiness.com" ($10-$15/yr)',
+      'Domain Registrars: Namecheap, Cloudflare, or GoDaddy',
+      'DNS Linking: Connect the domain name to your hosting server',
+      'Professionalism: A custom domain is required for business clients'
     ]
   },
   {
@@ -704,6 +822,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Quiz: Ready to Freelance?',
     type: 'quiz',
+    backgroundColor: 'from-orange-900 to-red-900',
     content: 'Self-assessment questions',
     bulletPoints: [
       '✓ Can you build a website from scratch?',
@@ -719,6 +838,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Complete Learning Resources',
     type: 'resource',
+    backgroundColor: 'from-slate-800 to-gray-900',
     content: 'Your toolkit for continuous growth',
     bulletPoints: [
       '📖 freeCodeCamp - Free comprehensive courses',
@@ -733,6 +853,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'Advanced Topics to Explore',
     type: 'resource',
+    backgroundColor: 'from-slate-800 to-gray-900',
     content: 'Next steps after mastering fundamentals',
     bulletPoints: [
       '⚛️ React/Vue/Angular - Frontend frameworks',
@@ -747,6 +868,7 @@ export const slides: SlideContent[] = [
     day: 3,
     title: 'AI-Powered Learning Tools',
     type: 'resource',
+    backgroundColor: 'from-slate-800 to-gray-900',
     content: 'Use AI to accelerate your learning',
     bulletPoints: [
       '🤖 ChatGPT - Ask any programming question',

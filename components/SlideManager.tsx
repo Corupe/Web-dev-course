@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Slide } from './Slide';
 import { Header } from './Header';
+import { AnimatePresence } from 'framer-motion';
 import { ProgressBar } from './ProgressBar';
 import { NavigationDots } from './NavigationDots';
 import { slides } from '@/app/data/slides';
@@ -78,14 +79,14 @@ export function SlideManager() {
 
       {/* Slide container */}
       <div className="relative w-full h-[calc(100vh-80px)] mt-20">
-        {slides.map((slide, index) => (
+        <AnimatePresence mode="wait">
           <Slide
-            key={slide.id}
-            slide={slide}
-            isActive={currentSlide === index}
-            index={index}
+            key={slides[currentSlide].id}
+            slide={slides[currentSlide]}
+            isActive={true}
+            index={currentSlide}
           />
-        ))}
+        </AnimatePresence>
       </div>
 
       {/* Navigation Controls */}
